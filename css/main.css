@@ -36,6 +36,7 @@ p {
   top: 0;
   height: 60px;
   z-index: 2;
+  transition: 0.3s ease-in-out;
 }
 
 #nav-ul {
@@ -64,6 +65,10 @@ p {
 
 .nav-li a:hover {
   text-shadow: 2px 2px 2px #86BA90;
+}
+
+.arrow-hide {
+  display: none;
 }
 
 main {
@@ -183,10 +188,24 @@ main {
 @media screen and (max-width: 600px) {
     #navbar {
       height: auto;
+      background-color: #1e3f20e3;
+    }
+
+    .nav-li:hover {
+      background-color: inherit;
+      
+    }
+
+    .nav-hide {
+      transform: translateY(-180px);
+    }
+
+    .arrow-hide {
+      display: inherit;
     }
 
     main {
-      margin-top: 86px;
+      margin-top: 60px;
     }
 
     #nav-ul {

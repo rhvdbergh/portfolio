@@ -9,11 +9,12 @@
   <title>Portfolio: Ronald van der Bergh</title>
 </head>
 <body>
-  <nav id="navbar">
+  <nav id="navbar" class="nav-hide">
     <ul id="nav-ul">
       <a href="#welcome-section"><li class="nav-li">Home</li></a>
       <a href="#projects"><li class="nav-li">Projects</li></a>
       <a href="#contact"><li class="nav-li">Contact</li></a>
+      <a id="arrow" class="arrow-hide" href="javascript:void(0)"><li class="nav-li">⤓</li></a>
     </ul>
   </nav>
   <main>
@@ -90,7 +91,20 @@
     </div>
   </main>
   <footer id="footer-section">
-    <p class="footer-p">Portfolio created as a FreeCodeCamp Responsive Web Design Certification Project.</p>
+    <p class="footer-p">© 2018 Ronald H. van der Bergh</p>
   </footer>
+  <script>
+
+    const navBar = document.querySelector('#navbar');
+    const arrowLink = document.querySelector('#arrow');
+    
+    function checkForMenu(e) {
+      navBar.classList.toggle('nav-hide');
+    }
+
+    navBar.addEventListener('touchend', checkForMenu);
+    arrowLink.addEventListener('onclick', (e) => e.preventDefault);
+    
+    </script>
 </body>
 </html>

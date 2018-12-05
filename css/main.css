@@ -1,17 +1,27 @@
 /* COLORS 
-#BEFFC7
-#86BA90
-#506C64
-#1E3F20
-#23967F
+#AC7444
+#BAA793
+#242D2C
+#8F8475
+#656157
 */
+
+:root {
+  --main-bg-color: #AC7444;
+  --nav-color: #242D2C;
+  --highlight-color: #BAA793;
+  --highlight-dark-color: #656157;
+  --secondary-color: #8F8475;
+  
+}
 
 * {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  color: #1E3F20;
+  color: var(--nav-color);
 }
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -31,7 +41,7 @@ p {
 
 #navbar {
   position: fixed;
-  background: #1E3F20;
+  background: var(--nav-color);
   width: 100%;
   top: 0;
   height: 60px;
@@ -51,11 +61,11 @@ p {
   transition: 0.4s;
   padding-top: 18px;
   padding-bottom: 17px;
-  color: #BEFFC7;
+  color: var(--highlight-color);
 }
 
 .nav-li:hover {
-  background-color: #86BA90;
+  background-color: var(--secondary-color);
   
 }
 
@@ -64,7 +74,7 @@ p {
 }
 
 .nav-li a:hover {
-  text-shadow: 2px 2px 2px #86BA90;
+  text-shadow: 2px 2px 2px var(--secondary-color);
 }
 
 .arrow-hide {
@@ -77,7 +87,8 @@ main {
 
 #welcome-section {
   height: 100vh;
-  background-color: #86BA90;
+  background-color: var(--secondary-color);
+  background: url('../pic/coffee_back.jpg');
 }
 
 #welcome-message, .welcome-p {
@@ -96,7 +107,7 @@ main {
 }
 
 #projects {
-  background-color: #23967F;
+  background-color: var(--secondary-color);
 }
 
 #projects-header {
@@ -119,7 +130,7 @@ main {
   margin-left: 8%;
   margin-right: 8%;
   border-radius: 15px;
-  background-color: #C98686;
+  background-color: var(--main-bg-color);
   transition: 0.5s ease;
   z-index: 1;
 }
@@ -141,13 +152,13 @@ main {
 
 .project-title {
   text-align: center;
-  color: #BEFFC7;
+  color: var(--highlight-color);
   font-size: 1.3em;
   padding-top: 20px;
 }
 
 #contact {
-  background-color: #86BA90;
+  background-color: var(--main-bg-color);
 }
 
 #contact-header {
@@ -172,12 +183,12 @@ main {
 }
 
 #footer-section {
-  background-color: #1E3F20;
+  background-color: var(--nav-color);
 }
 
 .footer-p {
   text-align: center;
-  color: #BEFFC7;
+  color: var(--highlight-color);
   padding-top: 80px;
   padding-bottom: 80px;
   padding-left: 30px;
@@ -188,7 +199,7 @@ main {
 @media screen and (max-width: 600px) {
     #navbar {
       height: auto;
-      background-color: #1e3f20e3;
+      background-color: var(--nav-color)e3;
     }
 
     .nav-li:hover {
